@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Side Rendering</title>
+</head>
+<body>
+    <input type="text" id="source">
+    <h1 id="render">Hello,</h1>
+    <script>
+        const source = document.getElementById("source");
+        const render = document.getElementById("render")
+
+        const renderMessage = (e) => {
+            data = e.target.value;
+            render.innerText = "Hello, " + data + "!";
+        }
+
+        source.addEventListener("input", renderMessage);
+    </script>
+</body>
+</html>
